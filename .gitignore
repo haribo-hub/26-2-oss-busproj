@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+
+# 수업자료와 내부 제출본은 공개 허락 확인 전 로컬에 보관
+/references/*.pdf
+/references/*.docx
+
+# 실측 원본은 이용 조건과 공유 범위를 검토한 뒤 별도로 공유
+/data/raw/

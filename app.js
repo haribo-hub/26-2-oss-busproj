@@ -1,5 +1,5 @@
 // ==========================================
-// 1. AYARLAR (İleride B'nin API'si gelince burası değişecek)
+// FIRST SETTINGS(WILL GET CHANGE WHEN B API IS COME)
 // ==========================================
 const CONFIG = {
   USE_MOCK_API: true, // Gerçek API hazır olunca false yap
@@ -7,7 +7,7 @@ const CONFIG = {
 };
 
 // ==========================================
-// 2. ÖRNEK (SANAL) API VERİLERİ
+// API DATA EX2
 // ==========================================
 const MOCK_RESPONSES = {
   // Senaryo 1: Henüz yeterli veri yok, tahmin beklemede
@@ -36,7 +36,7 @@ const MOCK_RESPONSES = {
 };
 
 // ==========================================
-// 3. VERİ ÇEKME FONKSİYONU (API Katmanı)
+//  (API BLOCK)
 // ==========================================
 async function fetchBusData(mockType = "pending") {
   if (CONFIG.USE_MOCK_API) {
@@ -55,7 +55,7 @@ async function fetchBusData(mockType = "pending") {
 }
 
 // ==========================================
-// 4. EKRANI GÜNCELLEME (UI Render)
+// 4. SCREEN UPDATE (UI Render)
 // ==========================================
 function renderBusStatus(data) {
   document.getElementById("target-stop").textContent = data.target_stop;
@@ -77,7 +77,7 @@ function renderBusStatus(data) {
     statusTitle.textContent = "예측 완료";
     statusMessage.textContent = `목표 정류장(${data.target_stop}) 도착 시 약 ${data.predicted_seats}석 남을 것으로 예상됩니다.`;
   } else {
-    // Tahmin bekleme (보류) durumu
+    
     predictedEl.textContent = "보류 중";
     predictedEl.classList.add("muted");
 
@@ -88,7 +88,7 @@ function renderBusStatus(data) {
 }
 
 // ==========================================
-// 5. BAŞLATMA VE TEST BUTONLARI
+// 5. START AND TEST BUTTON
 // ==========================================
 async function loadDashboard(mockType = "pending") {
   try {
@@ -101,7 +101,7 @@ async function loadDashboard(mockType = "pending") {
   }
 }
 
-// Alt kısımdaki test butonlarını bağla
+// CONNECTING TEST BUTTONS
 const btnPending = document.getElementById("btn-mock-pending");
 const btnReady = document.getElementById("btn-mock-ready");
 
@@ -118,4 +118,5 @@ btnReady.addEventListener("click", () => {
 });
 
 // Sayfa ilk açıldığında varsayılan olarak 'pending' (beklemede) durumunu göster
+
 loadDashboard("pending");

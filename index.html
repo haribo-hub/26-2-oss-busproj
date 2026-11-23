@@ -8,7 +8,7 @@
 </head>
 <body>
   <main class="container">
-    <!-- Üst Başlık -->
+    
     <header class="header">
       <div class="bus-info">
         <span class="bus-badge">6002번</span>
@@ -17,14 +17,14 @@
       <span class="update-time" id="updated-at">업데이트: --:--:--</span>
     </header>
 
-    <!-- Hedef Durak Bilgisi -->
+    <!-- goal bus stop info -->
     <section class="route-box">
       <span class="route-label">목표 정류장</span>
       <h1 class="stop-name" id="target-stop">불러오는 중...</h1>
       <p class="vehicle-id" id="vehicle-id">차량번호: -</p>
     </section>
 
-    <!-- Mevcut ve Tahmini Koltuk Kartları -->
+    
     <section class="seats-grid">
       <div class="seat-card">
         <span class="card-label">현재 좌석</span>
@@ -37,13 +37,13 @@
       </div>
     </section>
 
-    <!-- Durum / Tahmin Bekleme Nedeni Kutusu -->
+    
     <section class="status-box pending" id="status-box">
       <div class="status-title" id="status-title">예측 보류 중</div>
       <p class="status-message" id="status-message">데이터를 확인하고 있습니다...</p>
     </section>
 
-    <!-- Geliştirme Test Paneli (Gerçek API bağlanınca kaldırılacak) -->
+    <!-- develop testing panel (will get delete.. waiting for API key) -->
     <footer class="dev-controls">
       <p class="dev-title">테스트용 가상 데이터 전환</p>
       <div class="dev-buttons">
@@ -55,4 +55,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>

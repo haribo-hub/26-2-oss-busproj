@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* Üst Kısım */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.bus-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bus-badge {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+.bus-type {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.update-time {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Hedef Durak */
+.route-box {
+  margin-bottom: 20px;
+}
+
+.route-label {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.stop-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 4px;
+  color: #0f172a;
+}
+
+.vehicle-id {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* Koltuk Kartları */
+.seats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.seat-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.card-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.seat-value {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.seat-value.muted {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  font-weight: 600;
+  padding-top: 6px;
+}
+
+/* Durum / Uyarı Kutusu */
+.status-box {
+  border-radius: 14px;
+  padding: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.status-box.pending {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+}
+
+.status-box.ready {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.status-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.status-message {
+  font-size: 0.9rem;
+}
+
+/* Test Butonları */
+.dev-controls {
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.dev-title {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.dev-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.dev-buttons button {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dev-buttons button.active {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  font-weight: 600;
+}
+
+/* Çok küçük ekranlar için tek sütun */
+@media (max-width: 360px) {
+  .seats-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -24,7 +24,7 @@ body {
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
 }
 
-/* Üst Kısım */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -60,7 +60,7 @@ body {
   color: #94a3b8;
 }
 
-/* Hedef Durak */
+/* goal bus stop */
 .route-box {
   margin-bottom: 20px;
 }
@@ -83,7 +83,7 @@ body {
   margin-top: 4px;
 }
 
-/* Koltuk Kartları */
+/* seat card */
 .seats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -149,7 +149,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Test Butonları */
+/* test button */
 .dev-controls {
   border-top: 1px dashed #cbd5e1;
   padding-top: 16px;
@@ -186,9 +186,10 @@ body {
   font-weight: 600;
 }
 
-/* Çok küçük ekranlar için tek sütun */
+/* for small screen rows*/
 @media (max-width: 360px) {
   .seats-grid {
     grid-template-columns: 1fr;
   }
+
 }
